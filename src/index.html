@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Finance Bank</title>
+
+    <link href='https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.1/css/all.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="box">
+            <div class="profile">
+
+                <i class="far fa-bell"></i>
+
+                <img src="https://avatars.githubusercontent.com/u/67436042?v=4" alt="">
+                <h3>Leonardo Anthony</h3>
+
+                <div class="menu">
+                    <i class="far fa-credit-card"></i> Contas
+                    <i class="fas fa-exchange-alt"></i> Transações
+                    <i class="fas fa-star"></i> Favoritos
+                    <i class="fas fa-donate"></i> Contribua 
+                    <i class="fas fa-cog"></i> Configurações
+                </div>
+
+            </div>
+            <div class="content">
+                <div class="accounts">
+                    <div class="account">
+                        <h4>Ethereum</h4>
+                        <p>1.3239</p>
+                        <p>0.00</p>
+                    </div>
+                    <div class="account">
+                        <h4>LCN</h4>
+                        <p>1000000000</p>
+                        <p>0.00</p>
+                    </div>
+                </div>
+                <div class="transactions">
+                    <div class="transaction">
+                        <h4>Compra de Tokens</h4>
+                        <p>01/07/2023</p>
+                        <p>0.058</p>
+                    </div>
+                    <div class="transaction">
+                        <h4>Transferencia 0xc66...0c95</h4>
+                        <p>04/07/2023</p>
+                        <p>0.100</p>
+                    </div>
+                </div>
+                <div class="actions">
+                    <div class="buy"><i class="fas fa-dollar-sign"></i></div>
+                    <div class="sell"><i class="fas fa-cash-register"></i></div>
+                    <div class="pay"><i class="fas fa-money-bill-wave"></i></div>
+                    <div class="receive"><i class="fas fa-hand-holding-usd"></i></div>
+                </div>
+                <div class="chart">
+                    <div class="chart-box">
+                        <canvas id="categories"></canvas>
+                    </div>
+                    <div class="categories-name">
+                        <div class="category">
+                            <h4>Compras</h4>
+                            <p>$ 0.058</p>
+                        </div>
+                        <div class="category">
+                            <h4>Transferencias</h4>
+                            <p>$ 0.100</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx = document.getElementById('categories');
+
+        const data = {
+            datasets: [{
+                label: 'My First Dataset',
+                data: [300, 50, 100],
+                backgroundColor: [
+                'rgb(255, 99, 132)',
+                'rgb(54, 162, 235)',
+                'rgb(255, 205, 86)'
+                ],
+                cutout: 80
+            }]
+            }
+
+            const config = {
+                type: 'doughnut',
+                data: data,
+            };
+      
+        new Chart(ctx, config);
+      </script>
+    <script src="js/script.js"></script>
+</body>
+</html>
