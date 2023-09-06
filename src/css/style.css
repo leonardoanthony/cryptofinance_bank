@@ -105,13 +105,42 @@ img{
     "accounts actions" 1fr
     "accounts chart" 4fr
     "transactions chart" 3fr
-    / 1fr 1fr;
+    / 1fr 1.5fr;
 }
 
 .accounts{
     grid-area: accounts;
-     
 }
+
+.account{
+    display: flex;
+    padding: 1em;
+
+    align-items: start;
+    justify-content: space-between;
+
+    border-bottom: 1px solid #ccc;
+}
+
+.account div{
+    text-align: right;
+}
+
+.account .balance{
+    font-size: 1.1em;
+}
+
+.account .value{
+    color: #aaa;
+}
+
+.account.add{
+    border-bottom: none;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+
 .transactions{
     grid-area: transactions;
 }
@@ -146,7 +175,7 @@ img{
     background-color: rgb(255, 255, 255);
     border-radius: 20px;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
-    min-height: 100%;
+    height: 100%;
     width: 100%;
 }
 
