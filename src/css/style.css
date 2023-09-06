@@ -112,7 +112,7 @@ img{
     grid-area: accounts;
 }
 
-.account{
+.account, .transaction{
     display: flex;
     padding: 1em;
 
@@ -141,9 +141,44 @@ img{
     gap: 1em;
 }
 
+
+
+
 .transactions{
     grid-area: transactions;
 }
+
+.transaction div{
+    text-align: right;
+}
+
+.transaction.in p.transaction-value{
+    color: green;
+    font-weight: bold;
+}
+
+.transaction.in p.transaction-value::before{
+    content: '+';
+}
+
+.transaction.out p.transaction-value{
+    color: red;
+    font-weight: bold;
+}
+
+.transaction.out p.transaction-value::before{
+    content: '-';
+}
+
+
+
+
+
+
+
+
+
+
 .actions{
     grid-area: actions;
     display: flex;
@@ -171,6 +206,8 @@ img{
     grid-area: chart;
 }
 
+
+
 .card{
     background-color: rgb(255, 255, 255);
     border-radius: 20px;
@@ -178,6 +215,9 @@ img{
     height: 100%;
     width: 100%;
 }
+
+
+
 
 
 
